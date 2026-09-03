@@ -1,0 +1,1 @@
+using Microsoft.EntityFrameworkCore; using CarServices.Models; namespace CarServices.Data; public class AppDbContext:DbContext { public AppDbContext(DbContextOptions<AppDbContext> o):base(o){} public DbSet<Service> Services=>Set<Service>(); public DbSet<Booking> Bookings=>Set<Booking>(); }

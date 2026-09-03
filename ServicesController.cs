@@ -1,0 +1,1 @@
+using Microsoft.AspNetCore.Mvc; using CarServices.Data; namespace CarServices.Controllers; [ApiController][Route("api/services")] public class ServicesController:ControllerBase { readonly AppDbContext db; public ServicesController(AppDbContext d)=>db=d; [HttpGet] public async Task<IActionResult> Get()=>Ok(await db.Services.ToListAsync()); }
